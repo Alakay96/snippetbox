@@ -56,9 +56,9 @@ func (app *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
 }
 
 type snippetCreateForm struct {
-	Title               string
-	Content             string
-	Expires             int
+	Title               string `form:"title"`
+	Content             string `form:"content"`
+	Expires             int    `form:"expires"`
 	validator.Validator `form:"-"`
 }
 
