@@ -3,7 +3,7 @@ package models
 import (
 	"testing"
 
-	"snippetbox.alex.net/internal/assert/"
+	"snippetbox.alex.net/internal/assert"
 )
 
 func TestUserModelExists(t *testing.T) {
@@ -40,7 +40,7 @@ func TestUserModelExists(t *testing.T) {
 
 			exists, err := m.Exists(tt.userID)
 
-			assert.Eqaul(t, exists, tt.want)
+			assert.Equal(t, exists, tt.want)
 			assert.NilError(t, err)
 		})
 	}
